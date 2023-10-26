@@ -4,8 +4,8 @@ Create second sheet in CSV with following Headings: TMS (Y/N), TTL, Pulse Number
 Create third sheet in CSV with following Headings: TMS (Y/N), Pulse Number, Time
 
 Need to figure out how to alter the time values in the CSV BEFORE running this code to alter the CSV
-Need to figure out how to determine the time from the initial start value
-Need to figure out how to add the created dataframes to the CSV as new sheets. Some code below"""
+Need to figure out how to add Blocks column to the dataframe
+Need to figure out how to add the created dataframe to the CSV as new sheet. Some code below"""
 
 import csv
 import pandas as pd
@@ -22,7 +22,7 @@ Blocks = []
 TimeStamp = []
 Time = []
 
-pulse = 0
+pulse = 1
 
 """Iterates through the current CSV, pulling relevant data."""
 with open(tmsFile, mode='r') as file:
@@ -35,9 +35,11 @@ with open(tmsFile, mode='r') as file:
                     timeFormat = "%H:%M:%S"
                     """Will need to add .%f later"""
                     numTime = datetime.strptime(strTime, timeFormat)
-                    TimeStamp.append(numTime)
+                    """Need to format numTime differently"""
+                    TimeStamp.append(strTime)
                     if len(TimeStamp) != 0:
-                        Time.append((numTime - TimeStamp[0]).total_seconds())
+                        initial = datetime.strptime(TimeStamp[0], timeFormat)
+                        Time.append((numTime - initial).total_seconds())
                     else:
                         Time.append(numTime - numTime)
             elif row[i] == 'TTL:':
@@ -45,29 +47,20 @@ with open(tmsFile, mode='r') as file:
                     TTLCounter.append(row[i + 1])
                     TotalTTL.append(pulse)
                     pulse += 1
-
-            if row[i] == 'TMS:':
+                    TMSColumn.append('N')
+            elif row[i] == 'TMS:':
                 if i + 1 < len(row):
                     TMSColumn.append('Y')
                     TTLCounter.append('P')
                     TotalTTL.append('P')
-            else:
-                TMSColumn.append('N')
 
-print(TotalTTL)
-
-"""Calculates the time from start for each timestamp.
-initialTime = TimeStamp[0]
-for t in TimeStamp:
-    Time.append(t - initialTime)"""
-
-"""Data to be added to Sheet 2 - 'All Values' """
-data = { 'TMS (Y/N)' : [],
-         'TTL Counter' : [],
-         'Total TTL' : [],
-         'Blocks' : [],
-         'Timestamp' : [],
-         'Time/Duration (Seconds)' : []}
+"""Data to be added to Sheet 2 - 'All Values'"""
+data = { 'TMS (Y/N)' : TMSColumn,
+         'TTL Counter' : TTLCounter,
+         'Total TTL' : TotalTTL,
+         'Blocks' : Blocks,
+         'Timestamp' : TimeStamp,
+         'Time/Duration (Seconds)' : Time}
 df = pd.DataFrame(data)
 
 """Need to figure out how to add these data frames to different sheets!"""
