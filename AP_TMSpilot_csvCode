@@ -9,55 +9,66 @@ Need to figure out how to add the created dataframes to the CSV as new sheets. S
 
 import csv
 import pandas as pd
+from datetime import datetime, timedelta
 
 tmsFile='/Users/ashleypelton/Downloads/timing-rest-8blocks-60-101723 - Sheet1.csv'
 
-sheet_name='All Values'
-sheet_name='Relevant Values'
+sheet_name='Values'
 
 TMSColumn = []
-TTL = []
-PulseNumber = []
+TTLCounter = []
+TotalTTL = []
+Blocks = []
 TimeStamp = []
 Time = []
 
 pulse = 0
 
+"""Iterates through the current CSV, pulling relevant data."""
 with open(tmsFile, mode='r') as file:
     reader = csv.reader(file)
     for row in reader:
         for i in range(len(row)):
             if row[i] == 'Timestamp:':
                 if i + 1 < len(row):
-                    TimeStamp.append(row[i+1])
+                    strTime = row[i+1]
+                    timeFormat = "%H:%M:%S"
+                    """Will need to add .%f later"""
+                    numTime = datetime.strptime(strTime, timeFormat)
+                    TimeStamp.append(numTime)
+                    if len(TimeStamp) != 0:
+                        Time.append((numTime - TimeStamp[0]).total_seconds())
+                    else:
+                        Time.append(numTime - numTime)
             elif row[i] == 'TTL:':
                 if i + 1 < len(row):
-                    TTL.append(row[i + 1])
-                    PulseNumber.append(pulse)
+                    TTLCounter.append(row[i + 1])
+                    TotalTTL.append(pulse)
                     pulse += 1
 
             if row[i] == 'TMS:':
                 if i + 1 < len(row):
                     TMSColumn.append('Y')
-                    TTL.append(' ')
-                    PulseNumber.append(pulse)
-                    pulse += 1
+                    TTLCounter.append('P')
+                    TotalTTL.append('P')
             else:
                 TMSColumn.append('N')
 
-print(PulseNumber)
+print(TotalTTL)
 
+"""Calculates the time from start for each timestamp.
+initialTime = TimeStamp[0]
+for t in TimeStamp:
+    Time.append(t - initialTime)"""
+
+"""Data to be added to Sheet 2 - 'All Values' """
 data = { 'TMS (Y/N)' : [],
-         'TTL' : [],
-         'Pulse Number' : [],
+         'TTL Counter' : [],
+         'Total TTL' : [],
+         'Blocks' : [],
          'Timestamp' : [],
-         'Time' : []}
+         'Time/Duration (Seconds)' : []}
 df = pd.DataFrame(data)
-
-updatedData = { 'TMS (Y/N)' : [],
-                'Pulse Number' : [],
-                'Time' : []}
-updatedDf = pd.DataFrame(updatedData)
 
 """Need to figure out how to add these data frames to different sheets!"""
 """with pd.ExcelWriter(tmsFile, engine='openpyxl', mode='a') as writer:
