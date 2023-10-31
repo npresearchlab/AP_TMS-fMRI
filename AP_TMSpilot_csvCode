@@ -24,12 +24,12 @@ with open(tmsFile, mode='r') as file:
     reader = csv.reader(file)
     for row in reader:
         if row[0] == "t":
-            Blocks.append("ON")
+            Blocks.append("OFF")
         elif row[0] == ">>>":
             if row[1] == "t":
-                Blocks.append("OFF")
+                Blocks.append("ON")
         elif row[0] == "PULSE!":
-            Blocks.append("OFF")
+            Blocks.append("ON")
         for i in range(len(row)):
             if row[i] == 'Timestamp:':
                 if i + 1 < len(row):
