@@ -1,7 +1,15 @@
-# Code for extracting relevant values from CSV file created by Matlab Code
-# Currently two different outputs - CSV file with columns of relevant values, XLSX spreadsheet combining original CSV with relevant values
-
-# Need to figure out how to alter the time values in the CSV BEFORE running this code to alter the CSV
+# Created by Ashley Pelton
+# Code for extracting relevant values from CSV file
+# 
+# Two Outputs:
+# CSV file including relevant values split into columns
+# XLSX file including original CSV file and relevant values split into two different sheets
+#
+# TO MODIFY WHEN USING ***********************************************************************************
+# Line 19: alter tmsFile variable to be the filepath to the CSV
+# Line 80: alter name of .csv 'TMSfMRI-NAVXX.csv' to include NAV Participant ID
+# Line 83: alter name of .xlsx spreadsheet 'TMSfMRI-NAVXX-Combined.xlsx' to include NAV Participant ID
+# ********************************************************************************************************
 
 import csv
 import pandas as pd
@@ -69,9 +77,9 @@ data = { 'TMS (Y/N)' : TMSColumn,
 df2 = pd.DataFrame(data)
   
 # Creates combined CSV file
-df2.to_csv('updatedCSV.csv', index=False) # Need updated name
+df2.to_csv('TMSfMRI-NAVXX.csv', index=False) # Need updated name
 
 # Creates xlsx file with two sheets
-with pd.ExcelWriter('combined.xlsx', engine='openpyxl') as writer: # Need updated name
+with pd.ExcelWriter('TMSfMRI-NAVXX-Combined.xlsx', engine='openpyxl') as writer: # Need updated name
     df1.to_excel(writer, sheet_name='Initial CSV', index=False)
     df2.to_excel(writer, sheet_name='All Values', index=False)
