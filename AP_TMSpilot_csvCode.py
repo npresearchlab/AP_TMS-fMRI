@@ -15,8 +15,16 @@ import csv
 import pandas as pd
 from datetime import datetime, timedelta
 
-# Replace with name of CSV file to be manipulated
-tmsFile='/Users/ashleypelton/Downloads/timing-rest-8blocks-60-101723 - Sheet1.csv'
+# MODIFY: Replace with name of CSV file to be manipulated
+tmsFile='/Users/ashleypelton/Downloads/output.csv'
+
+# Create formatted .xlsx file separating contents of CSV file into cells
+df1 = pd.read_csv(tmsFile, delimiter=' ', header=None)
+
+combined = 'TMSfMRI-NAVXX-Combined.xlsx'
+
+with pd.ExcelWriter(combined, engine='openpyxl') as writer:
+    df1.to_excel(writer, sheet_name='Initial CSV', index=False)
 
 # Columns of relevant data to be obtained from initial CSV
 TMSColumn = []
@@ -26,7 +34,10 @@ Blocks = []
 TimeStamp = []
 Time = []
 
+print(TMSColumn)
+
 # Iterates through the current CSV, pulling relevant data
+# ALTER TO READ THROUGH THE .XLSX FILE RATHER THAN CSV
 pulse = 1
 with open(tmsFile, mode='r') as file:
     reader = csv.reader(file)
@@ -65,7 +76,7 @@ with open(tmsFile, mode='r') as file:
                     TotalTTL.append('P')
 
 # Initial CSV converted to a DF for the combined CSV file
-df1 = pd.read_csv(tmsFile)
+# df1 = pd.read_csv(tmsFile)
 
 # Relevant data values separated into columns
 data = { 'TMS (Y/N)' : TMSColumn,
@@ -77,9 +88,10 @@ data = { 'TMS (Y/N)' : TMSColumn,
 df2 = pd.DataFrame(data)
   
 # Creates combined CSV file
-df2.to_csv('TMSfMRI-NAVXX.csv', index=False) # Need updated name
+# MODIFY: Name of .csv file
+df2.to_csv('TMSfMRI-NAVXX.csv', index=False)
 
 # Creates xlsx file with two sheets
-with pd.ExcelWriter('TMSfMRI-NAVXX-Combined.xlsx', engine='openpyxl') as writer: # Need updated name
-    df1.to_excel(writer, sheet_name='Initial CSV', index=False)
-    df2.to_excel(writer, sheet_name='All Values', index=False)
+# MODIFY: Name of .xlsx file
+with pd.ExcelWriter('TMSfMRI-NAVXX-Combined.xlsx', engine='openpyxl') as writer:
+    df2.to_excel(writer, sheet_name='All Values', index=False)"""
