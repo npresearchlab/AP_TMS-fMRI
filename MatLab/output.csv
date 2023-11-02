@@ -1,0 +1,235 @@
+Welcome to Yasmine's rs-TMS-fMRI control code.
+>>> Initializing ...
+Opening serial port.Getting stimulator status.Ready to continue? [y/n]
+y
+Waiting for TTL ...
+t received.Total TTL: 1. Timestamp: 11:44:30.881
+t received.Total TTL: 2. Timestamp: 11:44:31.061
+t received.Total TTL: 3. Timestamp: 11:44:31.208
+t received.Total TTL: 4. Timestamp: 11:44:31.331
+t received.Total TTL: 5. Timestamp: 11:44:31.433
+t received.Total TTL: 6. Timestamp: 11:44:31.544
+t received.Total TTL: 7. Timestamp: 11:44:31.657
+t received.Total TTL: 8. Timestamp: 11:44:31.758
+t received.Total TTL: 9. Timestamp: 11:44:31.882
+t received.Total TTL: 10. Timestamp: 11:44:31.994
+t received.Total TTL: 11. Timestamp: 11:44:32.107
+t received.Total TTL: 12. Timestamp: 11:44:32.208
+t received.Total TTL: 13. Timestamp: 11:44:32.321
+t received.Total TTL: 14. Timestamp: 11:44:32.433
+t received.Total TTL: 15. Timestamp: 11:44:32.523
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:44:33.086
+PULSE! Total TMS: 1. Timestamp: 11:44:34.667
+>>> t received. Total TTL: 2. Timestamp: 11:44:34.675
+PULSE! Total TMS: 2. Timestamp: 11:44:36.257
+>>> t received. Total TTL: 3. Timestamp: 11:44:36.268
+>>> t received. Total TTL: 4. Timestamp: 11:44:36.273
+PULSE! Total TMS: 4. Timestamp: 11:44:37.852
+>>> t received. Total TTL: 5. Timestamp: 11:44:37.864
+PULSE! Total TMS: 5. Timestamp: 11:44:39.442
+>>> t received. Total TTL: 6. Timestamp: 11:44:39.449
+PULSE! Total TMS: 6. Timestamp: 11:44:41.032
+>>> t received. Total TTL: 7. Timestamp: 11:44:41.041
+PULSE! Total TMS: 7. Timestamp: 11:44:42.621
+t received.Total TTL: 16. Timestamp: 11:44:42.634
+t received.Total TTL: 17. Timestamp: 11:44:42.647
+t received.Total TTL: 18. Timestamp: 11:44:42.656
+t received.Total TTL: 19. Timestamp: 11:44:43.042
+t received.Total TTL: 20. Timestamp: 11:44:43.278
+t received.Total TTL: 21. Timestamp: 11:44:43.514
+t received.Total TTL: 22. Timestamp: 11:44:43.683
+t received.Total TTL: 23. Timestamp: 11:44:43.807
+t received.Total TTL: 24. Timestamp: 11:44:44.077
+t received.Total TTL: 25. Timestamp: 11:44:44.324
+t received.Total TTL: 26. Timestamp: 11:44:44.437
+t received.Total TTL: 27. Timestamp: 11:44:44.696
+t received.Total TTL: 28. Timestamp: 11:44:45.033
+t received.Total TTL: 29. Timestamp: 11:44:45.314
+t received.Total TTL: 30. Timestamp: 11:44:45.573
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:44:45.888
+PULSE! Total TMS: 1. Timestamp: 11:44:47.463
+>>> t received. Total TTL: 2. Timestamp: 11:44:47.476
+>>> t received. Total TTL: 3. Timestamp: 11:44:47.505
+>>> t received. Total TTL: 4. Timestamp: 11:44:47.620
+PULSE! Total TMS: 4. Timestamp: 11:44:49.201
+>>> t received. Total TTL: 5. Timestamp: 11:44:49.206
+PULSE! Total TMS: 5. Timestamp: 11:44:50.788
+>>> t received. Total TTL: 6. Timestamp: 11:44:50.794
+PULSE! Total TMS: 6. Timestamp: 11:44:52.376
+>>> t received. Total TTL: 7. Timestamp: 11:44:52.382
+PULSE! Total TMS: 7. Timestamp: 11:44:53.960
+t received.Total TTL: 31. Timestamp: 11:44:53.968
+t received.Total TTL: 32. Timestamp: 11:44:53.974
+t received.Total TTL: 33. Timestamp: 11:44:53.982
+t received.Total TTL: 34. Timestamp: 11:44:53.991
+t received.Total TTL: 35. Timestamp: 11:44:54.006
+t received.Total TTL: 36. Timestamp: 11:44:54.404
+t received.Total TTL: 37. Timestamp: 11:44:54.742
+t received.Total TTL: 38. Timestamp: 11:44:54.933
+t received.Total TTL: 39. Timestamp: 11:44:55.079
+t received.Total TTL: 40. Timestamp: 11:44:55.361
+t received.Total TTL: 41. Timestamp: 11:44:55.563
+t received.Total TTL: 42. Timestamp: 11:44:55.799
+t received.Total TTL: 43. Timestamp: 11:44:56.035
+t received.Total TTL: 44. Timestamp: 11:44:56.407
+t received.Total TTL: 45. Timestamp: 11:44:56.620
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:44:56.778
+PULSE! Total TMS: 1. Timestamp: 11:44:58.359
+>>> t received. Total TTL: 2. Timestamp: 11:44:58.365
+PULSE! Total TMS: 2. Timestamp: 11:44:59.946
+>>> t received. Total TTL: 3. Timestamp: 11:44:59.951
+PULSE! Total TMS: 3. Timestamp: 11:45:01.533
+>>> t received. Total TTL: 4. Timestamp: 11:45:01.537
+PULSE! Total TMS: 4. Timestamp: 11:45:03.118
+>>> t received. Total TTL: 5. Timestamp: 11:45:03.124
+PULSE! Total TMS: 5. Timestamp: 11:45:04.705
+>>> t received. Total TTL: 6. Timestamp: 11:45:04.711
+PULSE! Total TMS: 6. Timestamp: 11:45:06.293
+>>> t received. Total TTL: 7. Timestamp: 11:45:06.298
+PULSE! Total TMS: 7. Timestamp: 11:45:07.879
+t received.Total TTL: 46. Timestamp: 11:45:07.888
+t received.Total TTL: 47. Timestamp: 11:45:07.896
+t received.Total TTL: 48. Timestamp: 11:45:07.904
+t received.Total TTL: 49. Timestamp: 11:45:07.909
+t received.Total TTL: 50. Timestamp: 11:45:07.919
+t received.Total TTL: 51. Timestamp: 11:45:07.927
+t received.Total TTL: 52. Timestamp: 11:45:07.936
+t received.Total TTL: 53. Timestamp: 11:45:07.940
+t received.Total TTL: 54. Timestamp: 11:45:07.947
+t received.Total TTL: 55. Timestamp: 11:45:07.955
+t received.Total TTL: 56. Timestamp: 11:45:08.467
+t received.Total TTL: 57. Timestamp: 11:45:08.658
+t received.Total TTL: 58. Timestamp: 11:45:08.815
+t received.Total TTL: 59. Timestamp: 11:45:08.827
+t received.Total TTL: 60. Timestamp: 11:45:09.817
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:45:10.030
+PULSE! Total TMS: 1. Timestamp: 11:45:11.611
+>>> t received. Total TTL: 2. Timestamp: 11:45:11.622
+>>> t received. Total TTL: 3. Timestamp: 11:45:11.626
+PULSE! Total TMS: 3. Timestamp: 11:45:13.203
+>>> t received. Total TTL: 4. Timestamp: 11:45:13.208
+PULSE! Total TMS: 4. Timestamp: 11:45:14.791
+>>> t received. Total TTL: 5. Timestamp: 11:45:14.796
+PULSE! Total TMS: 5. Timestamp: 11:45:16.376
+>>> t received. Total TTL: 6. Timestamp: 11:45:16.381
+PULSE! Total TMS: 6. Timestamp: 11:45:17.962
+>>> t received. Total TTL: 7. Timestamp: 11:45:17.968
+PULSE! Total TMS: 7. Timestamp: 11:45:19.548
+t received.Total TTL: 61. Timestamp: 11:45:19.557
+t received.Total TTL: 62. Timestamp: 11:45:19.569
+t received.Total TTL: 63. Timestamp: 11:45:19.575
+t received.Total TTL: 64. Timestamp: 11:45:19.585
+t received.Total TTL: 65. Timestamp: 11:45:19.594
+t received.Total TTL: 66. Timestamp: 11:45:19.602
+t received.Total TTL: 67. Timestamp: 11:45:19.606
+t received.Total TTL: 68. Timestamp: 11:45:19.611
+t received.Total TTL: 69. Timestamp: 11:45:19.621
+t received.Total TTL: 70. Timestamp: 11:45:19.626
+t received.Total TTL: 71. Timestamp: 11:45:19.634
+t received.Total TTL: 72. Timestamp: 11:45:19.639
+t received.Total TTL: 73. Timestamp: 11:45:20.392
+t received.Total TTL: 74. Timestamp: 11:45:20.707
+t received.Total TTL: 75. Timestamp: 11:45:20.932
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:45:21.753
+PULSE! Total TMS: 1. Timestamp: 11:45:23.333
+>>> t received. Total TTL: 2. Timestamp: 11:45:23.338
+PULSE! Total TMS: 2. Timestamp: 11:45:24.919
+>>> t received. Total TTL: 3. Timestamp: 11:45:24.932
+>>> t received. Total TTL: 4. Timestamp: 11:45:24.939
+PULSE! Total TMS: 4. Timestamp: 11:45:26.520
+>>> t received. Total TTL: 5. Timestamp: 11:45:26.524
+PULSE! Total TMS: 5. Timestamp: 11:45:28.105
+>>> t received. Total TTL: 6. Timestamp: 11:45:28.110
+PULSE! Total TMS: 6. Timestamp: 11:45:29.691
+>>> t received. Total TTL: 7. Timestamp: 11:45:29.695
+PULSE! Total TMS: 7. Timestamp: 11:45:31.277
+t received.Total TTL: 76. Timestamp: 11:45:31.288
+t received.Total TTL: 77. Timestamp: 11:45:31.293
+t received.Total TTL: 78. Timestamp: 11:45:31.361
+t received.Total TTL: 79. Timestamp: 11:45:31.957
+t received.Total TTL: 80. Timestamp: 11:45:32.170
+t received.Total TTL: 81. Timestamp: 11:45:32.339
+t received.Total TTL: 82. Timestamp: 11:45:32.553
+t received.Total TTL: 83. Timestamp: 11:45:32.710
+t received.Total TTL: 84. Timestamp: 11:45:32.834
+t received.Total TTL: 85. Timestamp: 11:45:32.913
+t received.Total TTL: 86. Timestamp: 11:45:33.329
+t received.Total TTL: 87. Timestamp: 11:45:33.532
+t received.Total TTL: 88. Timestamp: 11:45:33.723
+t received.Total TTL: 89. Timestamp: 11:45:33.869
+t received.Total TTL: 90. Timestamp: 11:45:34.004
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:45:34.094
+PULSE! Total TMS: 1. Timestamp: 11:45:35.674
+>>> t received. Total TTL: 2. Timestamp: 11:45:35.684
+>>> t received. Total TTL: 3. Timestamp: 11:45:35.688
+PULSE! Total TMS: 3. Timestamp: 11:45:37.269
+>>> t received. Total TTL: 4. Timestamp: 11:45:37.273
+PULSE! Total TMS: 4. Timestamp: 11:45:38.849
+>>> t received. Total TTL: 5. Timestamp: 11:45:38.859
+>>> t received. Total TTL: 6. Timestamp: 11:45:38.866
+PULSE! Total TMS: 6. Timestamp: 11:45:40.447
+>>> t received. Total TTL: 7. Timestamp: 11:45:40.451
+PULSE! Total TMS: 7. Timestamp: 11:45:42.028
+t received.Total TTL: 91. Timestamp: 11:45:42.037
+t received.Total TTL: 92. Timestamp: 11:45:42.042
+t received.Total TTL: 93. Timestamp: 11:45:42.052
+t received.Total TTL: 94. Timestamp: 11:45:42.061
+t received.Total TTL: 95. Timestamp: 11:45:42.068
+t received.Total TTL: 96. Timestamp: 11:45:42.172
+t received.Total TTL: 97. Timestamp: 11:45:42.835
+t received.Total TTL: 98. Timestamp: 11:45:43.522
+t received.Total TTL: 99. Timestamp: 11:45:43.915
+t received.Total TTL: 100. Timestamp: 11:45:44.287
+t received.Total TTL: 101. Timestamp: 11:45:44.613
+t received.Total TTL: 102. Timestamp: 11:45:44.827
+t received.Total TTL: 103. Timestamp: 11:45:45.040
+t received.Total TTL: 104. Timestamp: 11:45:45.220
+t received.Total TTL: 105. Timestamp: 11:45:45.490
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:45:45.805
+>>> t received. Total TTL: 2. Timestamp: 11:45:46.255
+PULSE! Total TMS: 2. Timestamp: 11:45:47.832
+>>> t received. Total TTL: 3. Timestamp: 11:45:47.837
+PULSE! Total TMS: 3. Timestamp: 11:45:49.419
+>>> t received. Total TTL: 4. Timestamp: 11:45:49.430
+>>> t received. Total TTL: 5. Timestamp: 11:45:49.436
+PULSE! Total TMS: 5. Timestamp: 11:45:51.015
+>>> t received. Total TTL: 6. Timestamp: 11:45:51.020
+PULSE! Total TMS: 6. Timestamp: 11:45:52.600
+>>> t received. Total TTL: 7. Timestamp: 11:45:52.604
+PULSE! Total TMS: 7. Timestamp: 11:45:54.186
+t received.Total TTL: 106. Timestamp: 11:45:54.196
+t received.Total TTL: 107. Timestamp: 11:45:54.206
+t received.Total TTL: 108. Timestamp: 11:45:54.211
+t received.Total TTL: 109. Timestamp: 11:45:54.218
+t received.Total TTL: 110. Timestamp: 11:45:54.223
+t received.Total TTL: 111. Timestamp: 11:45:54.228
+t received.Total TTL: 112. Timestamp: 11:45:54.236
+t received.Total TTL: 113. Timestamp: 11:45:54.240
+t received.Total TTL: 114. Timestamp: 11:45:54.603
+t received.Total TTL: 115. Timestamp: 11:45:54.817
+t received.Total TTL: 116. Timestamp: 11:45:55.087
+t received.Total TTL: 117. Timestamp: 11:45:55.289
+t received.Total TTL: 118. Timestamp: 11:45:55.413
+t received.Total TTL: 119. Timestamp: 11:45:55.762
+t received.Total TTL: 120. Timestamp: 11:45:56.088
+>>> (TMS-fMRI) Waiting for TTL ...
+>>> t received. Total TTL: 1. Timestamp: 11:45:56.414
+PULSE! Total TMS: 1. Timestamp: 11:45:57.992
+>>> t received. Total TTL: 2. Timestamp: 11:45:57.996
+PULSE! Total TMS: 2. Timestamp: 11:45:59.574
+>>> t received. Total TTL: 3. Timestamp: 11:45:59.590
+PULSE! Total TMS: 3. Timestamp: 11:46:01.167
+>>> t received. Total TTL: 4. Timestamp: 11:46:01.173
+PULSE! Total TMS: 4. Timestamp: 11:46:02.754
+>>> t received. Total TTL: 5. Timestamp: 11:46:02.771
+>>> t received. Total TTL: 6. Timestamp: 11:46:02.775
+PULSE! Total TMS: 6. Timestamp: 11:46:04.357
+>>> t received. Total TTL: 7. Timestamp: 11:46:04.363
+PULSE! Total TMS: 7. Timestamp: 11:46:05.941
