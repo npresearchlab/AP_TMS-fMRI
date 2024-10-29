@@ -8,7 +8,8 @@
 %
 %
 % For Ashley <3
-% sub- and spm12 folder: /Users/nprluser/Documents/AP/Nav_Preproc
+% sub- folders location: /Users/nprluser/Documents/AP/Nav_Subjects
+% spm12 folder location: /Users/nprluser/Documents/AP/AP_TMS-fMRI
 % dcm2niix location:/Library/Frameworks/PythonVersions/3.12/bin/dcm2niix
 % Slice Number = 72
 % TR = 1.5 s
