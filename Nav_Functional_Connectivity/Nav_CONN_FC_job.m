@@ -28,14 +28,18 @@
 % Asking for user input for filepaths
 sub_location = input('Path to Parent Directory containing sub- Folders:\n', 's');
 
-% Determining the prefix/suffix to assist in locating the preprocessed file
-a = input("Does your most preprocessed file name include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
+% Asking for user input for ROI masks
+ppc_mask = input('Path to PPC Mask:\n', 's');
+rsc_mask = input('Path to RSC Mask:\n', 's');
 
-if a == 'P'
+% Determining the prefix/suffix to assist in locating the preprocessed file
+tag_location = input("Does your most preprocessed file name include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
+
+if tag_location == 'P'
     tag = input("What is the prefix of your most preprocessed file?\n-->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', input 'smooth'.\n", 's');
 end
 
-if a == 'S'
+if tag_location == 'S'
     tag = input("What is the suffix of your most preprocessed file?\n-->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', input 'smooth'.\n", 's');
 end
 
@@ -66,6 +70,11 @@ disp(subjects)
 for subject = subjects
     fprintf('Performing 1st Analysis for %s:\n', subject);
 
+    if tag_location == 'P'
+        subject_func = sprintf('%s/%s/func', sub_location, subject);
+        tag_files = dir(fullfile(subject_func, [tag, '*'])).name;
+        preproc_file = {tag_files.name};
+        % This doesnt work yet
+    end
 
-    
 end
