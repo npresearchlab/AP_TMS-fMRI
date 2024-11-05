@@ -2,10 +2,14 @@
 % README
 % 
 % Format:
-% - Parent Directory containing sub-xx folders for each subject
+% - Parent Directory containing sub-xx folders for each participant
 % - Within each sub-xx folder, there should be two folders: anat & func
-% - The preprocessed file should be contained in the func folder for each
-% subject
+% - The anat & func folders can have any files within it, but it needs
+% either .dcm files or a .nii file for the anat & func files
+% - If .dcm have been converted to .nii:
+%      func .nii file is titled - sub-xx_bold.nii
+%      anat .nii file is titled - sub-xx_t1.nii
+%
 %
 % For Ashley <3
 % sub- folders location: /Users/nprluser/Documents/AP/AP_Nav_Subjects
@@ -36,7 +40,7 @@ if tag_location == 'P'
 end
 
 if tag_location == 'S'
-    tag = input("What is the suffix of your most preprocessed file, INLCUDING the file format?\n--->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', input 'smooth.nii'.\n", 's');
+    tag = input("What is the suffix of your most preprocessed file?\n--->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', input 'smooth'.\n", 's');
 end
 
 % Creating list of items in sub- directory
@@ -90,7 +94,6 @@ for subject = subjects
             warning('No files found for subject %s with suffix %s.', subject, tag);
         end
     end
-
 
 end
 
