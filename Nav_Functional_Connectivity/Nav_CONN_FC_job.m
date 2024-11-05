@@ -29,14 +29,14 @@ ppc_mask = input('Path to PPC Mask:\n', 's');
 rsc_mask = input('Path to RSC Mask:\n', 's');
 
 % Determining the prefix/suffix to assist in locating the preprocessed file
-tag_location = input("Does your most preprocessed file name include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
+tag_location = input("Does your final preprocessed filename include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
 
 if tag_location == 'P'
-    tag = input("What is the prefix of your most preprocessed file?\n--->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', input 'smooth'.\n", 's');
+    tag = input("What is the prefix of your most preprocessed file?\n--->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', you may input 'smooth_'.\n", 's');
 end
 
 if tag_location == 'S'
-    tag = input("What is the suffix of your most preprocessed file, INLCUDING the file format?\n--->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', input 'smooth.nii'.\n", 's');
+    tag = input("What is the suffix of your most preprocessed file, INCLUDING the file format?\n--->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', you may input '_smooth.nii'.\n", 's');
 end
 
 % Creating list of items in sub- directory
