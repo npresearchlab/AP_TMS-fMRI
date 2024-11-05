@@ -2,14 +2,10 @@
 % README
 % 
 % Format:
-% - Parent Directory containing sub-xx folders for each participant
+% - Parent Directory containing sub-xx folders for each subject
 % - Within each sub-xx folder, there should be two folders: anat & func
-% - The anat & func folders can have any files within it, but it needs
-% either .dcm files or a .nii file for the anat & func files
-% - If .dcm have been converted to .nii:
-%      func .nii file is titled - sub-xx_bold.nii
-%      anat .nii file is titled - sub-xx_t1.nii
-%
+% - The preprocessed file should be contained in the func folder for each
+% subject
 %
 % For Ashley <3
 % sub- folders location: /Users/nprluser/Documents/AP/AP_Nav_Subjects
@@ -33,14 +29,14 @@ ppc_mask = input('Path to PPC Mask:\n', 's');
 rsc_mask = input('Path to RSC Mask:\n', 's');
 
 % Determining the prefix/suffix to assist in locating the preprocessed file
-tag_location = input("Does your most preprocessed file name include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
+tag_location = input("Does your final preprocessed filename include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
 
 if tag_location == 'P'
-    tag = input("What is the prefix of your most preprocessed file?\n-->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', input 'smooth'.\n", 's');
+    tag = input("What is the prefix of your most preprocessed file?\n--->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', you may input 'smooth_'.\n", 's');
 end
 
 if tag_location == 'S'
-    tag = input("What is the suffix of your most preprocessed file?\n-->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', input 'smooth'.\n", 's');
+    tag = input("What is the suffix of your most preprocessed file, INCLUDING the file format?\n--->Example: For the filename 'sub-00_BOLD_realign_stc_norm_smooth.nii', you may input '_smooth.nii'.\n", 's');
 end
 
 % Creating list of items in sub- directory
@@ -62,7 +58,6 @@ end
 
 % Updating subject array type
 subjects = string(subjects);
-disp(subjects)
 
 %---------------------------- 1st Analysis -----------------------------%
 
@@ -70,11 +65,34 @@ disp(subjects)
 for subject = subjects
     fprintf('Performing 1st Analysis for %s:\n', subject);
 
+    subject_func = sprintf('%s/%s/func', sub_location, subject);
+
+    % Locate files with the specified prefix
     if tag_location == 'P'
-        subject_func = sprintf('%s/%s/func', sub_location, subject);
-        tag_files = dir(fullfile(subject_func, [tag, '*'])).name;
-        preproc_file = {tag_files.name};
-        % This doesnt work yet
+        tag_files = dir(fullfile(subject_func, [tag, '*']));
+        
+        % Check if there are any matching files
+        if ~isempty(tag_files)  
+            preproc_file = {tag_files.name};
+        else
+            warning('No files found for subject %s with tag %s.', subject, tag);
+        end
     end
 
+    % Locate files with the specified suffix
+    if tag_location == 'S'
+        tag_files = dir(fullfile(subject_func, ['*' tag]));
+
+        % Check if there are any matching files
+        if ~isempty(tag_files)  
+            preproc_file = {tag_files.name};
+        else
+            warning('No files found for subject %s with suffix %s.', subject, tag);
+        end
+    end
+
+
 end
+
+
+
