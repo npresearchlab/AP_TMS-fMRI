@@ -9,27 +9,25 @@
 %
 % For Ashley <3
 % sub- folders location: /Users/nprluser/Documents/AP/AP_Nav_Subjects
-% spm12 folder location: /Users/nprluser/Documents/AP/AP_TMS-fMRI
-% dcm2niix location:/Library/Frameworks/PythonVersions/3.12/bin/dcm2niix
-% Slice Number = 72
-% TR = 1.5 s
-% Slice Order = Interleaved, Bottom-to-Top
-% FWHM: 4
 %-------------------------------------------------------------------------
-%-------------------------------- Notes ---------------------------------%
-%
-%
+%----------------------------- Instructions -----------------------------%
+
+disp("Welcome to Ashley Pelton's Functional Connectivity Script!\nThis script takes two specified ROIs and conducts a functional connectivity (FC) analysis between them.")
+disp("The average activation of the subcortical ROI is ")
+
+
+
 %------------------------ Initializing Variables ------------------------%
 
 % Asking for user input for filepaths
-sub_location = input('Path to Parent Directory containing sub- Folders:\n', 's');
+sub_location = input('What is the path to your Parent Directory containing sub- Folders:\n', 's');
 
 % Asking for user input for ROI masks
-ppc_mask = input('Path to PPC Mask:\n', 's');
-rsc_mask = input('Path to RSC Mask:\n', 's');
+ppc_mask = input('What is the path to your Cortical ROI Mask:\n', 's');
+rsc_mask = input('What is the path to your Subcortical ROI Mask:\n', 's');
 
 % Determining the prefix/suffix to assist in locating the preprocessed file
-tag_location = input("Does your final preprocessed filename include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n", 's');
+tag_location = input("Does your final preprocessed filename include a prefix or a suffix? Input 'P' for a prefix convention and a 'S' for a suffix convention.\n--->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', 'smooth_' is considered the most recent prefix.\n", 's');
 
 if tag_location == 'P'
     tag = input("What is the prefix of your most preprocessed file?\n--->Example: For the filename 'smooth_norm_stc_realign_sub-00_BOLD.nii', you may input 'smooth_'.\n", 's');
